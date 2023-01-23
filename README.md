@@ -1,0 +1,3 @@
+# currency-converter
+Simple currency-converter for USD, EUR, JPY, British Pound...
+Build with C++
