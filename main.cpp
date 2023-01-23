@@ -1,10 +1,7 @@
 #include <iostream>
 using namespace std;
-#include <cmath>
-#include <iomanip>
 
 struct dollar {
-   // float usd;
    float eur;
    float yen;
    float pound;
@@ -42,21 +39,29 @@ int main(){
    dollar dollarConvert;
    float convert;
 
+   // for the output;
+   string keyword;
+   string convertedCurrency;
+
    switch (currentCurrency) {
       case 1:
          dollarConvert.money = money * 1.00;
+         keyword = "USD";
          // convert = money * 1.00;
       break;
       case 2:
          dollarConvert.money = money * 1.09;
+         keyword = "EUR";
          // convert = money * 1.09;
       break;
       case 3:
          dollarConvert.money = money * 0.0077;
+         keyword = "YEN";
          // convert = money * 0.0077;
       break;
       case 4:
          dollarConvert.money = money * 1.24;
+         keyword = "POUNDS";
          // convert = money * 1.24;
       break;
       default:
@@ -73,16 +78,20 @@ int main(){
 
    switch (convertCurrency) {
       case 1:
-         cout << "Converted money = " << dollarConvert.money << endl;
+         convertedCurrency = "USD";
+         cout << money << " " << keyword << " = " << dollarConvert.money <<" "<< convertedCurrency << endl;
       break;
       case 2:
-         cout << "Converted money = " << dollarConvert.eur << endl;
+         convertedCurrency = "EUR";
+         cout << money << " " << keyword << " = " << dollarConvert.eur <<" "<< convertedCurrency << endl;
       break;
       case 3:
-         cout << "Converted money = " << dollarConvert.yen << endl;
+         convertedCurrency = "YEN";
+         cout << money << " " << keyword << " = " << dollarConvert.yen <<" "<< convertedCurrency << endl;
       break;
       case 4:
-         cout << "Converted money = " << dollarConvert.pound << endl;
+         convertedCurrency = "POUND";
+         cout << money << " " << keyword << " = " << dollarConvert.pound <<" "<< convertedCurrency << endl;
       break;
       default:
       break;
